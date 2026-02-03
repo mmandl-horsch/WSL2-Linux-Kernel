@@ -30,7 +30,7 @@ mount "$lo_dev" "$tmp_dir/modules_img"
 chmod a+rw "$tmp_dir/modules_img"
 
 # Copy over the contents of $1
-cp -r "$1/lib/modules/$2"/* "$tmp_dir/modules_img"
+cp -r -v "$1/lib/modules/$2"/* "$tmp_dir/modules_img"
 umount "$tmp_dir/modules_img"
 
 # Do the final conversion
